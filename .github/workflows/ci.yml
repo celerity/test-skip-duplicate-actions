@@ -13,5 +13,9 @@ jobs:
         with:
           concurrent_skipping: "same_content_newer"
           skip_after_successful_duplicate: "true"
-      - run: echo ${{ steps.skip-check.outputs.should_skip }}
+      - uses: actions/checkout@v2
+      - run: |
+          git rev-parse HEAD
+          ls
+          echo "should_skip=${{ steps.skip-check.outputs.should_skip }}"
 
