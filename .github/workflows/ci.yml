@@ -9,7 +9,7 @@ jobs:
     runs-on: [ self-hosted ]
     steps:
       - id: skip-check
-        uses: fkirc/skip-duplicate-actions@v4.0.0
+        uses: paescuj/skip-duplicate-actions@debug
         with:
           concurrent_skipping: "same_content_newer"
           skip_after_successful_duplicate: "true"
